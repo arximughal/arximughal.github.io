@@ -9,7 +9,6 @@ export default class SEO extends React.Component {
   render() {
     return (
       <Helmet
-        htmlAttributes='en'
         title={this.props.title}
         meta={[
           {

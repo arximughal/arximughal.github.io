@@ -1,4 +1,54 @@
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/_grid';
 /* site main theme */
-@import './colors.scss';
-@import './fonts.scss';
-@import './mixins.scss';
+@import './colors';
+@import './fonts';
+@import './mixins';
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+body, * {
+	color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include heading-fonts;
+}
+
+button,
+input[type=submit],
+input[type=button],
+input[type=reset] {
+	@include heading-fonts;
+	outline: none;
+	border: 6px solid #000;
+	padding: 8px 15px;
+	background: none;
+	text-transform: capitalize;
+	box-shadow: 10px 10px #000;
+	transition: all 0.15s ease-in-out;
+
+	&:active,
+	&:visited,
+  &:focus {
+		outline: none;
+	}
+}
+
+a {
+	@include heading-fonts;
+	color: #000;
+
+	&:hover,
+  &:active,
+  &:visited,
+  &:focus {
+		color: #000;
+		text-decoration: none;
+	}
+}
+

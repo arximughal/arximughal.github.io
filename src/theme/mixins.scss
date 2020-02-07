@@ -1,0 +1,22 @@
+@import './fonts';
+
+@mixin heading-fonts {
+	font-family: 'Space Mono', monospace;
+	font-weight: bold;
+}
+
+@mixin heading-fonts-normal {
+	font-family: 'Space Mono', monospace;
+	font-weight: normal;
+}
+
+@mixin body-fonts-normal {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: normal;
+}
+
+@mixin body-fonts-bold {
+	font-family: 'Source Sans Pro', monospace;
+	font-weight: bold;
+}
+
