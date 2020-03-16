@@ -1,4 +1,5 @@
 @import './fonts';
+@import './colors';
 
 @mixin heading-fonts {
 	font-family: 'Space Mono', monospace;
@@ -20,3 +21,11 @@
 	font-weight: bold;
 }
 
+@mixin code-box {
+	font-family: 'Space Mono', monospace;
+	background: $grey;
+	color: $white;
+	-webkit-box-shadow: inset 0px 0px 65px -27px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 0px 65px -27px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 0px 65px -27px rgba(0,0,0,0.75);
+}

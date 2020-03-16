@@ -41,14 +41,104 @@ input[type=reset] {
 
 a {
 	@include heading-fonts;
-	color: #000;
+	color: $black;
+	background: linear-gradient(to bottom, $black 0%, $black 100%);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	background-size: 4px 4px;
 
 	&:hover,
   &:active,
   &:visited,
   &:focus {
-		color: #000;
+		color: $white;
 		text-decoration: none;
+		background-size: 4px 50px;
 	}
 }
 
+p,
+span,
+ul,
+ol,
+li,
+div,
+strong,
+em,
+b,
+i,
+u,
+del,
+ins,
+sup,
+sub,
+small,
+abbr,
+q,
+cite,
+dfn,
+mark,
+input[type=text],
+input[type=password],
+textarea {
+	@include body-fonts-normal;
+}
+
+strong, b, cite, q, {
+	font-weight: bold;
+}
+
+mark {
+	background: $highlighter;
+	display: inline-block;
+}
+
+var, time {
+	font-family: 'Space Mono', monospace;
+}
+
+blockquote {
+	position: relative;
+	&::before {
+		display: inline-block;
+		content: '';
+		width: 4px;
+		height: 100%;
+		position: absolute;
+		background: $black;
+	}
+	p {
+		@include heading-fonts;
+		font-style: italic;
+		font-size: 24px;
+		letter-spacing: 0;
+		padding-left: 10px;
+	}
+	cite {
+		padding-left: 10px;
+		&::before {
+			display: inline-block;
+			content: '\2e3a';
+		}
+	}
+}
+
+pre {
+	@include code-box;
+	padding: 15px;
+}
+
+code {
+	@include code-box;
+	padding: 5px;
+}
+
+kbd {
+	font-family: 'Space Mono', monospace;
+}
+
+samp {
+	font-family: 'Space Mono', monospace;
+	background: $light-grey;
+	padding: 5px;
+}
